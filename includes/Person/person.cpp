@@ -17,21 +17,13 @@ unsigned int Person::mIdCounter = 1;
 
 Person::~Person() {}    
 
-void Person::setName(std::string name) {
-    mName = name;
-}
+void Person::setId(unsigned int id) { mId = id; }
+void Person::setName(std::string name) { mName = name; }
+void Person::setAddress(std::string address) {  mAddress = address; }
 
-void Person::setAddress(std::string address) {
-    mAddress = address;
-}
-
-void Person::getName() {
-    std::cout << mName << std::endl;
-}
-
-void Person::getAddress() {
-    std::cout << mAddress << std::endl;
-}   
+unsigned int Person::getId() const { return mId; }
+std::string Person::getName() const { return mName; }
+std::string Person::getAddress() const { return mAddress; }
 
 /**
  * @brief Overloaded operator to compare two Person objects.

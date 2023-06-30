@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 
 class Person {
@@ -12,11 +14,13 @@ class Person {
         Person();
         ~Person();
         
+        void setId(unsigned int id);
         void setName(std::string name);
         void setAddress(std::string address);
         
-        void getName();
-        void getAddress();
+        unsigned int getId() const;
+        std::string getName() const;
+        std::string getAddress() const;
         
         bool operator==(const Person& person) const;
 };
